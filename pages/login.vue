@@ -75,6 +75,9 @@ export default {
          // this.$auth.setToken('local', `Bearer ${data.api_token}`)
         });
         console.log(user)
+        await this.$axios.get('/api/auth/user').then(function(data){
+          console.log(data);
+        })
         // await this.$store.dispatch('auths/login', { '79500093271': '4444' })
 
        // this.$router.push('/')
